@@ -38,6 +38,21 @@ $ ls -l /proc/1138/exe
 lrwxrwxrwx 1 root root 0 2010-10-29 10:20 /proc/1138/exe -> /usr/sbin/mysqld
 ```
 
+#### Find all mounted USB devices
+
+```bash
+root@nuc54250:/home/smith# lsusb
+Bus 001 Device 002: ID 8087:8000 Intel Corp.
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 008: ID 0458:708c KYE Systems Corp. (Mouse Systems)
+Bus 002 Device 007: ID 0458:708c KYE Systems Corp. (Mouse Systems)
+Bus 002 Device 006: ID 1d57:f833 Xenta
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+# You can use `lsusb -v` to get more detailed information
+```
+
 #### [How to check hard disk performance!?](http://askubuntu.com/questions/87035/how-to-check-hard-disk-performance)
 
 hdparm:
