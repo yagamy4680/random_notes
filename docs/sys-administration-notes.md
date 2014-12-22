@@ -1,4 +1,4 @@
-[[toc]]
+{{toc}}
 
 http://www.brendangregg.com/linuxperf.html
 ![Linux Performance](http://www.brendangregg.com/Perf/linuxperftools_1000.png)
