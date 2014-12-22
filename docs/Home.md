@@ -1,6 +1,9 @@
 Yes, it's a good day.
 
 
+[[System Administration Notes|sys-administration-notes]]
+
+
 
 ### Civic Hacking
 
