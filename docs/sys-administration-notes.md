@@ -11,7 +11,7 @@ http://www.brendangregg.com/linuxperf.html
 $ netstat -tulpn
 
 Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1138/mysqld
 tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      850/portmap
 tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1607/apache2
@@ -380,8 +380,7 @@ I modified `/etc/init/failsafe.conf`, and comment out all `sleep` statements, th
 
 ### Performance
 
-- [PHP5-FPM with Nginx 效能調教 (1)](http://blog.hothero.org/posts/2014/05/24/php5-fpm-with-nginx-performance-tuned-1)
--
+[PHP5-FPM with Nginx 效能調教 (1)](http://blog.hothero.org/posts/2014/05/24/php5-fpm-with-nginx-performance-tuned-1)
 
 
 ### References
