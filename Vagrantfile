@@ -46,6 +46,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sudo apt-get update
     sudo apt-get install -y git ruby-full libicu-dev build-essential
     sudo gem install gollum
-    sudo nohup gollum --page-file-dir docs --allow-uploads dir --mathjax --h1-title 'Yagamy Random Notes' /vagrant > /var/log/gollum.log 2>&1&
+    sudo nohup gollum --page-file-dir docs --allow-uploads dir /vagrant > /var/log/gollum.log 2>&1&
   EOF
 end
