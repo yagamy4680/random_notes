@@ -1,8 +1,3 @@
----
-title: 【Open Data x Open Gov x g0v】clkao環球考察分享會
-layout: post
-tags: ['open data', 'open gov', 'g0v']
----
 
 [文字轉播]
 https://g0v.hackpad.com/ep/pad/static/zlvgEFmKNel
