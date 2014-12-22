@@ -6,11 +6,11 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 
 - [[Arduino Resources|arduino]]
 
-- [[ARM BareMetal Development Resources|arm-bare-metal.md]]
+- [[ARM BareMetal Development Resources|arm-bare-metal]]
 
-- [[BeagleBoneBlack Boot Process|bbb-boot-process.md]]
+- [[BeagleBoneBlack Boot Process|bbb-boot-process]]
 
-- [[Big Data Study Resources|big-data-study-resources.md]]
+- [[Big Data Study Resources|big-data-study-resources]]
 
 - [[Bluetooth - Linux Kernel Configs|bluetooth-linux-kernel-config]]
 

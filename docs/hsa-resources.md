@@ -1,9 +1,3 @@
----
-title: HSA resources
-layout: post
-tags: ['hsa', 'cluster', 'opencl', 'llvm']
----
-
 [SnuCL](http://snucl.snu.ac.kr/), An OpenCL Framework for Heterogeneous Clusters, made by Seoul National University
 
 
