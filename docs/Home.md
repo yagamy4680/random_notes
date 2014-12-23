@@ -56,6 +56,12 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 - [[cvapp design|idea-cvapp-design]]
 - [[SeaDragon app design|idea-seadragon-app]]
 
+[WakaTime](https://wakatime.com/), Fully automatic time tracking for programmers.
+
+
+如果要打造"物聯網工程公司", 聘僱很多工程師, 也可以拿來那些 open-source 的 plugin 來改寫, 改送資料到自己的 server. (E.g. [sublime plugin](https://github.com/wakatime/sublime-wakatime), written in python). => 很快的查一下 codes, 發現所有 log 資料的會放在 `~/.wakatime.log`, JSON 格式, 可以很快的自行修改.. (refer to [log.py](https://github.com/wakatime/sublime-wakatime/blob/master/packages/wakatime/wakatime/log.py))
+
+
 ## Experiments
 
 - [[distcc performance|exp-distcc]]
@@ -68,7 +74,7 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 - [[Python Tips|python-tips]]
 
 
-## Software-Defined-Everythin
+## Software-Defined-Everything
 
 - [[SDN (Software-Defined-Network) articles|sdn-articles]]
 
