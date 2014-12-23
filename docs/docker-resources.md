@@ -109,6 +109,7 @@ The goal is to create a new command for Docker (docker.io) "docker setup" which 
 
 Good example to initiate a VirtualBox with boot2docker iso image:
 https://github.com/mitchellh/boot2docker-vagrant-box/blob/master/vagrantfile.tpl
+
 ```ruby
 Vagrant.configure("2") do |config|
   config.ssh.shell = "sh -l"
@@ -138,11 +139,13 @@ Good example to add SSH public keys into boot2docker iso image:
 https://github.com/mitchellh/boot2docker-vagrant-box/blob/master/build-iso.sh
 
 [boot2docker-qemu](https://github.com/steeve/boot2docker/issues/31)
+
 - `qemu -cdrom boot2docker.iso -m 1024`
 - `qemu -hda boot2docker.iso -m 1024`
 
 
 TinyCoreLinux installation for running [term.js](https://github.com/chjj/term.js/):
+
 ```bash
 tce-load -wi python
 tce-load -wi compiletc
@@ -162,6 +165,7 @@ node index.js -n
 https://news.ycombinator.com/item?id=7185432
 
 I have my router serving up TFTP with the following pxelinux.cfg (and the appropriate vmlinuz64 and initrd.img extracted from the b2d ISO):
+
 ```text
 LABEL boot2docker
           MENU LABEL boot2docker v0.5.2
@@ -206,3 +210,6 @@ http://distro.ibiblio.org/tinycorelinux/5.x/armv7/
 - [Microservice not a free lunch](http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html)
 - [DOCKERCON TALKS](https://www.dockboard.org/dockercon-talks-recap/)
 
+### Ideas
+
+- [On Docker Container Composition](https://medium.com/@allingeek/on-docker-container-composition-a98788f1aa3c)

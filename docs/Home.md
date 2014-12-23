@@ -1,5 +1,7 @@
 Yes, just my random notes, for any interesting topic, idea, and random thought at random time.
 
+![](images/news1_1.jpg)
+
 [[_TOC_]]
 
 ## Misc
@@ -42,6 +44,12 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 - [[Time-Series DB|time-series-db]]
 
 - [[Vagrant|vagrant-notes]]
+
+- [[Embedded System Resources|embedded-system-resources]]
+
+- [[Embedded Linux|embedded-linux]]
+
+- [[Linux|linux]]
 
 ## Idea
 
@@ -87,3 +95,10 @@ https://launchpad.net/gcc-arm-embedded
 Debug CoffeeScript
 https://gist.github.com/AnsonT/1115264
 http://stackoverflow.com/questions/11068023/debugging-coffeescript-line-by-line 
+
+
+## Best Practices and Principles
+
+- [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+
+

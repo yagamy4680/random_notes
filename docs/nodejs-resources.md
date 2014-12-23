@@ -187,6 +187,12 @@ new Nightmare()
 
 #### [mjpegcanvasjs](https://github.com/WPI-RAIL/mjpegcanvasjs), Display a MJPEG stream from the ROS mjpeg_server Inside of a HTML5 Canvas.
 
+#### [jungledb](https://github.com/1602/jugglingdb), Multi-database ORM: redis, mongodb, mysql, sqlite, postgres, neo4j, memory...
+
+#### [nan](https://github.com/rvagg/nan), Native Abstractions for Node.js
+
+A header file filled with macro and utility goodness for making add-on development for Node.js easier across versions 0.8, 0.10 and 0.11, and eventually 0.12.[
+
 #### [engine.io](https://github.com/LearnBoost/engine.io)
 The main goal of Engine is ensuring the most reliable realtime communication. Unlike the previous Socket.IO core, it always establishes a long-polling connection first, then tries to upgrade to better transports that are "tested" on the side.
 
