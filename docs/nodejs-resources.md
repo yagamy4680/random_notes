@@ -20,23 +20,12 @@
   - Stop limiting your connections with default maxSockets value
 - [Gulp + Browserify: The Everything Post](http://viget.com/extend/gulp-browserify-starter-faq)
 
+### Nodejs for TinyCoreLinux
 
-
-#### [Hipache](https://github.com/dotcloud/hipache)
-a distributed HTTP and websocket proxy.
-
-Hipache is a distributed proxy designed to route high volumes of http and websocket traffic to unusually large numbers of virtual hosts, in a highly dynamic topology where backends are added and removed several times per second. It is particularly well-suited for PaaS (platform-as-a-service) and other environments that are both business-critical and multi-tenant.
-
-#### [node-opencv](https://github.com/peterbraden/node-opencv)
-
-OpenCV bindings for Node.js. OpenCV is the defacto computer vision library - by interfacing with it natively in node, we get powerful real time vision in js.
-
-(yagamy: now it supports opencv 2.3.1)
-
-
-#### [tiny-node](https://github.com/sihorton/tiny-node) nodejs extension for TinyCoreLinux.
+[tiny-node](https://github.com/sihorton/tiny-node) nodejs extension for TinyCoreLinux.
 
 Built successfully on CorePlus-4.7.3.iso tcz extensions: 
+
 ```shell
 tce-load -i -w git 
 tce-load -i -w curl 
@@ -56,16 +45,38 @@ cd tiny-node
 sudo ./make v0.8.18
 ```
 
-#### [node-dev](https://github.com/fgnass/node-dev)
-
-Node-dev is a development tool for Node.js that automatically restarts the node process when a script is modified.
-
-**Desktop Notifications**
+### Desktop Notifications
 
 Status and error messages can be displayed as desktop notification using either Growl or libnotify.
 
 ![](https://github-camo.global.ssl.fastly.net/7adb738e7a64557d92556307614cce7bad510f39/687474703a2f2f66676e6173732e6769746875622e636f6d2f696d616765732f6e6f64652d6465762e706e67)
 
+#### [nw-desktop-notifications](https://github.com/robrighter/nw-desktop-notifications), Simple cross platform desktop notifications for node-webkit
+
+```javascript
+window.LOCAL_NW.desktopNotifications.notify(iconUrl, title, content, clickHandlerCallback);
+```
+
+BTW, also need to read the [Github issue](https://github.com/rogerwang/node-webkit/issues/27) talking about desktop notification feature for Node-Webkit.
+
+
+
+### Modules
+
+#### [Hipache](https://github.com/dotcloud/hipache), a distributed HTTP and websocket proxy
+
+Hipache is a distributed proxy designed to route high volumes of http and websocket traffic to unusually large numbers of virtual hosts, in a highly dynamic topology where backends are added and removed several times per second. It is particularly well-suited for PaaS (platform-as-a-service) and other environments that are both business-critical and multi-tenant.
+
+#### [node-opencv](https://github.com/peterbraden/node-opencv), OpenCV bindings for Node.js
+
+OpenCV is the defacto computer vision library - by interfacing with it natively in node, we get powerful real time vision in js.
+
+(yagamy: now it supports opencv 2.3.1)
+
+
+#### [node-dev](https://github.com/fgnass/node-dev), process management for nodejs apps
+
+Node-dev is a development tool for Node.js that automatically restarts the node process when a script is modified.
 
 #### [Prerender.io](https://prerender.io/), allow your Javascript apps to be crawled perfectly by search engines. (Not-free solution!!!)
 
@@ -89,14 +100,6 @@ Features
 a powerful set of tools for interfacing with dynamic libraries using pure JavaScript in the Node.js environment. It can be used to build interface bindings for libraries without using any C++ code.
 
 #### [VerbalExpressions](https://github.com/jehna/VerbalExpressions), a JavaScript library that helps to construct difficult regular expressions
-
-#### [nw-desktop-notifications](https://github.com/robrighter/nw-desktop-notifications), Simple cross platform desktop notifications for node-webkit
-
-```javascript
-window.LOCAL_NW.desktopNotifications.notify(iconUrl, title, content, clickHandlerCallback);
-```
-
-BTW, also need to read the [Github issue](https://github.com/rogerwang/node-webkit/issues/27) talking about desktop notification feature for Node-Webkit.
 
 #### [ConvNetJS](http://cs.stanford.edu/people/karpathy/convnetjs/), Deep Learning in your browser
 a Javascript library for training Deep Learning models (mainly Neural Networks) entirely in your browser. Open a tab and you're training. No software requirements, no compilers, no installations, no GPUs, no sweat.
@@ -128,6 +131,7 @@ The tracking.js library brings different computer vision algorithms and techniqu
 #### [Basil.js](http://wisembly.github.io/basil.js/), Unified localstorage, cookie and session storage JavaScript API.
 
 Basic Usage:
+
 ```javascript
 basil = new window.Basil(options);
 
@@ -147,6 +151,7 @@ Sails makes it easy to build custom, enterprise-grade Node.js apps. It is design
 #### [Nigthmare.js](http://www.nightmarejs.org/), A high level wrapper for Phantomjs.
 
 RAW PHANTOMJS
+
 ```javascript
 phantom.create(function (ph) {
   ph.createPage(function (page) {
@@ -171,6 +176,7 @@ phantom.create(function (ph) {
 ```
 
 WITH NIGHTMARE
+
 ```javascript
 new Nightmare()
   .goto('http://yahoo.com')
@@ -179,3 +185,19 @@ new Nightmare()
   .run();
 ```
 
+#### [mjpegcanvasjs](https://github.com/WPI-RAIL/mjpegcanvasjs), Display a MJPEG stream from the ROS mjpeg_server Inside of a HTML5 Canvas.
+
+#### [engine.io](https://github.com/LearnBoost/engine.io)
+The main goal of Engine is ensuring the most reliable realtime communication. Unlike the previous Socket.IO core, it always establishes a long-polling connection first, then tries to upgrade to better transports that are "tested" on the side.
+
+#### [javascript-load-image](https://github.com/blueimp/JavaScript-Load-Image), JavaScript Load Image is a library to load images
+
+`JavaScript-Load-Image` loads images to provided as File or Blob objects or via URL. It returns an optionally scaled and/or cropped HTML img or canvas element.
+
+
+#### Bootstrap templates
+
+- http://startbootstrap.com/popular-templates
+- http://startbootstrap.com/modern-business
+- http://startbootstrap.com/templates/modern-business/index.html
+- https://github.com/DinisCruz/DocPad-modern-business

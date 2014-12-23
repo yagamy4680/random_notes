@@ -16,16 +16,12 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 
 - [[Bluetooth - Linux Kernel Configs|bluetooth-linux-kernel-config]]
 
-- [[C++ Tips|cpp-tips]]
-
 - [[Cubieboard - Linux Kernel Compilation Tips|cubieboard-linux-kernel-tips]]
 
 - [[Docker Resources|docker-resources]]
 
 - [[FrontEnd JavaScript Tips|frontend-js-tips]]
   - server-side device detection
-
-- [[HSA Resources|hsa-resources]]
 
 - [[iBeacon Resources|ibeacon-resources]]
 
@@ -39,15 +35,34 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 
 - [[Node.JS Resources|nodejs-resources]]
 
+- [[OpenCL Resources|opencl-resources]]
+- [[OpenCV Resources|opencv-resources]]
+- [[OpenWRT|openwrt]]
+
+- [[Time-Series DB|time-series-db]]
+
+- [[Vagrant|vagrant-notes]]
+
 ## Idea
 
 - [[cvapp design|idea-cvapp-design]]
-
+- [[SeaDragon app design|idea-seadragon-app]]
 
 ## Experiments
 
 - [[distcc performance|exp-distcc]]
+- [[Docker Private Registry|exp-private-docker-registry]]
 
+
+## Programming Language Tips
+
+- [[C++ Tips|cpp-tips]]
+- [[Python Tips|python-tips]]
+
+
+## Software-Defined-Everythin
+
+- [[SDN (Software-Defined-Network) articles|sdn-articles]]
 
 ## Civic Hacking
 
