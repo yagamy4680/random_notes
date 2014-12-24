@@ -209,7 +209,17 @@ http://distro.ibiblio.org/tinycorelinux/5.x/armv7/
 - [Docker Misconceptions](https://devopsu.com/blog/docker-misconceptions/)
 - [Microservice not a free lunch](http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html)
 - [DOCKERCON TALKS](https://www.dockboard.org/dockercon-talks-recap/)
+- [Comprehensive Overview of Storage Scalability in Docker](http://developerblog.redhat.com/2014/09/30/overview-storage-scalability-docker/)
+
+### Tips
+
+- [24 random docker tips](http://csaba.palfi.me/random-docker-tips/)
 
 ### Ideas
 
 - [On Docker Container Composition](https://medium.com/@allingeek/on-docker-container-composition-a98788f1aa3c)
+
+### Misc
+
+[Spoon](https://spoon.net/), Use your applications instantly, anywhere.
+Run in isolated containers. Share with collaborators. Migrate between devices. (yagamy: docker-like on Windows!!)

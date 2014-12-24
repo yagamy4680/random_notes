@@ -33,10 +33,15 @@ udp        0      0 0.0.0.0:54746           0.0.0.0:*                           
 ```
 
 TCP port 3306 was opened by mysqld process having PID # 1138. You can verify this using /proc, enter:
+
 ```bash
 $ ls -l /proc/1138/exe
 lrwxrwxrwx 1 root root 0 2010-10-29 10:20 /proc/1138/exe -> /usr/sbin/mysqld
 ```
+
+#### Lint your shell script
+
+[ShellCheck](http://www.shellcheck.net/), A shell script static analysis tool ([github](https://github.com/koalaman/shellcheck))
 
 #### Find all mounted USB devices
 
@@ -401,6 +406,3 @@ I modified `/etc/init/failsafe.conf`, and comment out all `sleep` statements, th
 ### References
 
 [isc-dhcp-server options](http://www.ipamworldwide.com/dhcp-options/isc-dhcpv4-options.html)
-
-
-

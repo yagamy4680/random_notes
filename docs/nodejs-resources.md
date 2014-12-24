@@ -200,6 +200,9 @@ The main goal of Engine is ensuring the most reliable realtime communication. Un
 
 `JavaScript-Load-Image` loads images to provided as File or Blob objects or via URL. It returns an optionally scaled and/or cropped HTML img or canvas element.
 
+#### [bluebird](https://github.com/petkaantonov/bluebird), a fully featured promise library with focus on innovative features and performance
+![](https://raw.githubusercontent.com/petkaantonov/bluebird/master/logo.png)
+
 
 #### Bootstrap templates
 

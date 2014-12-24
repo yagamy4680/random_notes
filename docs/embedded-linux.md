@@ -9,14 +9,35 @@ iPIPE
 
 ![](http://wiki.csie.ncku.edu.tw/embedded/xenomai/adeos.jpg)
 
+[Install Xenomai on the Beaglebone black(Angstrom and Debian)](http://emplearn.blogspot.tw/2014/11/xenomai-on-beaglebone-black.html)
+
+市面上許多的產品，如果內部的作業系統不能夠做到即時處理，就會造成許多人眼視覺上、使用上的誤差，例如要將馬達操控的桿子維持在水平狀，如果不能夠即時的PID迴授控制，那麼就會導致用力過度的狀況。...
+
+[Xenomai on the Beaglebone Black in 14 easy steps](http://brunosmartins.info/xenomai-on-the-beaglebone-black-in-14-easy-steps/)
+
+[EBC Xenomai](http://elinux.org/EBC_Xenomai)
+
+[Installing xenomai and debian on beaglebone black](http://sagar.se/xenomai-debian-on-bbb.html) (yagamy: super simple procedure to enable Xenomai on bbb kernel 3.8)
+
+```bash
+git clone https://github.com/cdsteinkuehler/linux-dev
+cd linux-dev
+./build_kernel.sh
+./tools/install_kernel.sh
+```
+
 ### AdeOS
 
-[Adaptive Domain Environment for Operating System (pdf)](http://www.opersys.com/ftp/pub/Adeos/adeos.pdf)
+[Adaptive Domain Environment for Operating System](http://www.opersys.com/ftp/pub/Adeos/adeos.pdf) (pdf)
+
+[Life With Adeos](http://www.xenomai.org/documentation/branches/v2.3.x/pdf/Life-with-Adeos-rev-B.pdf) (pdf)
 
 
 ### Articles
 
 [BEAGLEBONE BLACK 及其超频](http://blog.dword1511.info/?p=4549#more-4549)
+
+[Cool New Phone With Dual OS, Coolpad Bodun](https://storify.com/redbendsoftware/cool-new-phone-coolpad-v1)
 
 ### Code Snippets
 

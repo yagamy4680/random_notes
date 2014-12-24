@@ -124,3 +124,10 @@ img.src = url;
 > Interesting! That might explain why two cameras at 320x240 work but any higher resolution fails.
 
 (yagamy: USB2 speed is 480Mbits, USB3 speed is 5Gbits, but USB1.1 is only 12Mbits)
+
+
+### Misc
+
+[Genetic Programming: Evolution of Mona Lisa](http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/)
+
+![](http://rogeralsing.files.wordpress.com/2008/12/evolutionofmonalisa1.gif?w=1324)
