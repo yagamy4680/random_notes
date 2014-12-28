@@ -387,6 +387,12 @@ yourprogram < yourfifo
 echo "Hello World" > yourfifo
 ```
 
+### Log
+
+[Logstalgia](https://code.google.com/p/logstalgia/) is a website traffic visualization that replays or streams web-server access logs as a pong-like battle between the web server and an never ending torrent of requests.
+
+![](http://logstalgia.googlecode.com/svn/trunk/screenshots/logstalgia.png)
+
 
 ### NFS
 [Optimizing NFS Performance](http://nfs.sourceforge.net/nfs-howto/ar01s05.html)

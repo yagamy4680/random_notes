@@ -55,6 +55,12 @@ Yes, just my random notes, for any interesting topic, idea, and random thought a
 
 - [[RTOS Resources|rtos-resources]]
 
+- [[Compiler|compiler]]
+
+- [[Management|management]]
+
+- [[Functional Programming|functional-programming]]
+
 ## Idea
 
 - [[cvapp design|idea-cvapp-design]]
@@ -110,6 +116,8 @@ http://stackoverflow.com/questions/11068023/debugging-coffeescript-line-by-line
 ## Best Practices and Principles
 
 - [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+
+- [LiveScript Style Guide](https://github.com/gkz/LiveScript-style-guide)
 
 ### Immutable Infrastructure
 

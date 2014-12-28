@@ -203,6 +203,26 @@ The main goal of Engine is ensuring the most reliable realtime communication. Un
 #### [bluebird](https://github.com/petkaantonov/bluebird), a fully featured promise library with focus on innovative features and performance
 ![](https://raw.githubusercontent.com/petkaantonov/bluebird/master/logo.png)
 
+#### [darkmagic](https://github.com/kessler/darkmagic), an experimental opinionated dependency injection module
+
+This framework uses a lot of "dark magic" (hence its name) tricks that many will view as dangerous. These people are probably right and you should listen to them!
+
+This module:
+
+- parses function signature and uses the parameters, literally to load modules, first attempting to require them as they are and then by attaching them to various predefined search paths in your local file system
+
+- Attempt to inject and invoke recursively EVERY module that exports a function and override the module system cache with the result of the invocation for that module. This behavior is customizable and is turned off by default for external modules (core/node_modules)
+
+- dashify camelCase (camel-case) parameters when trying to find non local node modules
+
+- infer that an exported function is async if the last paramter is called "callback"
+
+- relies heavily on the module system, it does not cache the dependencies you create ** as a result, one injector is use for one process. You can create more injectors but they will share the same underlying require cache.
+
+#### [Papa Parse](http://papaparse.com/docs.html#results), The powerful, in-browser CSV parser for big boys and girls
+
+#### [jeieba](https://github.com/fxsjy/jieba), 结巴中文分词
+"结巴"中文分词：做最好的 Python 中文分词组件 "Jieba" (Chinese for "to stutter") Chinese text segmentation: built to be the best Python Chinese word segmentation module.
 
 #### Bootstrap templates
 
@@ -210,3 +230,11 @@ The main goal of Engine is ensuring the most reliable realtime communication. Un
 - http://startbootstrap.com/modern-business
 - http://startbootstrap.com/templates/modern-business/index.html
 - https://github.com/DinisCruz/DocPad-modern-business
+
+### Articles
+
+[Better local require() paths for Node.js](https://gist.github.com/branneman/8048520)
+
+1. The Symlink
+2. The Global
+3. The Module

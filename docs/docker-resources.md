@@ -210,6 +210,8 @@ http://distro.ibiblio.org/tinycorelinux/5.x/armv7/
 - [Microservice not a free lunch](http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html)
 - [DOCKERCON TALKS](https://www.dockboard.org/dockercon-talks-recap/)
 - [Comprehensive Overview of Storage Scalability in Docker](http://developerblog.redhat.com/2014/09/30/overview-storage-scalability-docker/)
+- [Docker Image Insecurity](https://titanous.com/posts/docker-insecurity), Dec/23, 2014
+- [Real-World Docker: 10 Things We've Learned](http://www.slideshare.net/rightscale/webinar-real-world-docker-2014-1209-v3-1) (slide)
 
 ### Tips
 
@@ -223,3 +225,8 @@ http://distro.ibiblio.org/tinycorelinux/5.x/armv7/
 
 [Spoon](https://spoon.net/), Use your applications instantly, anywhere.
 Run in isolated containers. Share with collaborators. Migrate between devices. (yagamy: docker-like on Windows!!)
+
+
+### Best Practices & Principles
+
+[程式碼準則 - 開發出靈活、穩定、可持續發展的 HTML 與 CSS 標準。](http://lisp.es/code-guide/)

@@ -10,3 +10,5 @@
 Note, cubieboard support is already listed [here](http://git.linuxfoundation.org/?p=llvmlinux.git;a=tree;f=targets;h=9dcaa349a0b9bf3391bc42a770903c06cf8c8914;hb=ff3526d12fa9f7a24d1b03f2b279f49d07ecb820)
 
 [LLVM generates code that generates code](http://fdiv.net/2012/11/16/llvm-generates-code-that-generates-code), refer to [Vuo](https://vuo.org/) (worth to study).
+
+[McSema](http://blog.trailofbits.com/2014/08/07/mcsema-is-officially-open-source/), is Officially Open Source! at Aug/7, 2014
