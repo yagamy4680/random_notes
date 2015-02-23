@@ -61,6 +61,7 @@ Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 #### [How to check hard disk performance!?](http://askubuntu.com/questions/87035/how-to-check-hard-disk-performance)
 
 hdparm:
+
 ```shell
 sudo hdparm -Tt /dev/sda
 
@@ -70,6 +71,7 @@ Timing buffered disk reads: 234 MB in  3.00 seconds =  77.98 MB/sec
 ```
 
 dd:
+
 ```shell
 dd if=/dev/zero of=/tmp/output bs=8k count=10k; rm -f /tmp/output
 
@@ -80,9 +82,9 @@ dd if=/dev/zero of=/tmp/output bs=8k count=10k; rm -f /tmp/output
 
 #### [於 Linux 如何查看 詳細的硬體資訊、型號](http://blog.longwin.com.tw/2014/02/linux-query-hardware-2014/)
 
-apt-get install smartmontools
-sudo smartctl -i /dev/sda
 ```text
+# apt-get install smartmontools
+# smartctl -i /dev/sda
 
 Model Family:     Seagate Barracuda 7200.14 (AF)
 Device Model:     ST2000DM001-1CH164
@@ -97,8 +99,10 @@ ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
 ```
 
-sudo hdparm -i /dev/sda1
+
 ```text
+# sudo hdparm -i /dev/sda1
+
 /dev/sda1:
 
 Model=ST2000DM001-1CH164, FwRev=CC29, SerialNo=Z340PKFV
@@ -116,6 +120,7 @@ Drive conforms to: Reserved:  ATA/ATAPI-4,5,6,7
 ```
 
 sudo dmidecode -t # 後面可以接下述的參數
+
 - bios
 - system
 - baseboard
@@ -186,6 +191,7 @@ location / {
 ### GUI Utilities
 
 [Xshell 4 超好用的 SSH 連線工具](http://evil-ms.blogspot.tw/2012/06/xshell-4-ssh.html)
+
 - multiple terminals in same window
 - remember password, also keep public/private keys
 - drop and copy to remote server
@@ -196,6 +202,7 @@ location / {
 
 ### Global Web Infrastructure
 [SmokePing](http://oss.oetiker.ch/smokeping/), keeps track of your network latency:
+
 - Best of breed latency visualisation.
 - Interactive graph explorer.
 - Wide range of latency measurment plugins.
@@ -220,6 +227,7 @@ vncserver :1
 ### Experiences
 
 [10 Things We Forgot to Monitor](http://word.bitly.com/post/74839060954/ten-things-to-monitor)
+
 - Fork Rate
 - flow control packets
 - Swap In/Out Rate
@@ -232,6 +240,7 @@ vncserver :1
 - Load Balancer Status.
 
 [Linux Container (lxc) 與 QEMU 搭配使用](https://tossug.hackpad.com/Linux-Container-lxc-QEMU--v388MYVKAIn)
+
 1. 安裝 lxc 以及 qemu-user-static
 ```bash
 sudo apt-get install lxc qemu-user-static:i386 debian-archive-keyring debian-ports-archive-keyring
@@ -409,6 +418,24 @@ I modified `/etc/init/failsafe.conf`, and comment out all `sleep` statements, th
 [PHP5-FPM with Nginx 效能調教 (1)](http://blog.hothero.org/posts/2014/05/24/php5-fpm-with-nginx-performance-tuned-1)
 
 
+### Chat
+
+[http://sdelements.github.io/lets-chat/](http://sdelements.github.io/lets-chat/)
+
+[https://github.com/sdelements/lets-chat](https://github.com/sdelements/lets-chat)
+
+![](http://sdelements.github.io/lets-chat/assets/img/devices.png)
+
+
 ### References
 
 [isc-dhcp-server options](http://www.ipamworldwide.com/dhcp-options/isc-dhcpv4-options.html)
+
+
+### Misc
+
+#### [How to setup an Access Point mode Wi-Fi Hotspot?](http://askubuntu.com/questions/180733/how-to-setup-an-access-point-mode-wi-fi-hotspot)
+
+`echo 1| sudo tee /proc/sys/net/ipv4/ip_forward`
+`sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o ppp0 -j MASQUERADE`
+

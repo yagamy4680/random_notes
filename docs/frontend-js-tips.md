@@ -1,3 +1,10 @@
+### Webpack
+
+[webpack](http://webpack.github.io/docs/what-is-webpack.html) takes modules with dependencies and generates static assets representing those modules.
+![](http://webpack.github.io/assets/what-is-webpack.png)
+
+(yagamy: need to read [motivation](http://webpack.github.io/docs/motivation.html))
+
 
 ### [Server-Side Device Detection With JavaScript](http://www.smashingmagazine.com/2014/07/01/server-side-device-detection-with-javascript/)
 
@@ -69,6 +76,11 @@ MeteorCharts is the next generation charting framework for the web. It uses an a
 Developed by Baidu, and cool!!
 ![](http://images.cnitblog.com/blog/36987/201412/112222139008732.png)
 
+
+
+### Misc
+
+[移动端前端开发调试](http://yujiangshui.com/multidevice-frontend-debug/)
 
 ### Obfuscation
 

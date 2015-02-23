@@ -64,9 +64,12 @@ docker run -d -v PATH/TO/gitlab-docker:/srv/gitlab gitlab
 6. docker contacts the index to give checksums for upload images
 
 ### Private Repository
+
 - [Share Images via Repositories](http://docs.docker.io/en/latest/use/workingwithrepository/)
 - [HOW TO USE YOUR OWN REGISTRY](http://blog.docker.io/2013/07/how-to-use-your-own-registry/)
 - [docker enterprise registry discussions on Github](https://github.com/dotcloud/docker/issues/1988), need to read when I have time.
+- [利用官方私人 registry image 架設私人 registry (CentOS 6 host)](https://dockers.hackpad.com/-registry-image-registry-CentOS-6-host-xtp4N9JFMuC)
+
 
 ### Storage
 [Where are Docker images stored?](http://blog.thoward37.me/articles/where-are-docker-images-stored/), very good article to describe the storage layout in Docker.

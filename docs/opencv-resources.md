@@ -122,7 +122,9 @@ To assess VASIR's performance and practical feasibility, the Iris Challenge Eval
 
 
 #### Eye Detection
+
 http://answers.opencv.org/question/12034/face-eyes-and-iris-detection/
+
 A novel approach for accurate localisation of the pupils in real time is proposed in this paper: Timm and Barth. Accurate eye centre localisation by means of gradients. In Proceedings of the Int. Conference on Computer Theory and Applications (VISAPP), volume 1, pages 125-130, Algarve, Portugal, 2011. INSTICC. (also see youtube video at Accurate eye center localisation for low-cost eye tracking) There is also a github repository that implements this paper: C++ implementation And a blog article.
   - http://thume.ca/projects/2012/11/04/simple-accurate-eye-center-tracking-in-opencv/
   - https://github.com/trishume/eyeLike (yagamy: opencv based implementation)
@@ -164,6 +166,7 @@ cap.set(CV_CAP_PROP_FPS , 60);
 [Simple Python Motion Jpeg (mjpeg server) from webcam. Using: OpenCV,BaseHTTPServer](https://gist.github.com/n3wtron/4624820)
 
 [Streaming OpenCV Output Through HTTP/Network with MJPEG](http://ariandy1.wordpress.com/2013/04/07/streaming-opencv-output-through-httpnetwork-with-mjpeg/)
+
 - using mjpeg-streamer: `mjpeg_streamer -i "input_file.so -f /home/ariandy/mjpg" -o "output_http.so -w /usr/local/www"`
 - using another native opencv app to output mjpeg file: `./bgsubtract2 /home/ariandy/mjpg/out.mjpg -bgs`
 
@@ -278,3 +281,11 @@ FREAK extractor;
 extractor.compute(image, keypoints, descriptors);
 
 https://github.com/kikohs/freak/blob/master/demo/freak_demo.cpp
+
+### dlib
+
+[Python Stuff and Real-Time Video Object Tracking](http://blog.dlib.net/2015/02/dlib-1813-released.html)
+
+[Real-Time Face Pose Estimation](http://blog.dlib.net/2014/08/real-time-face-pose-estimation.html)
+![](http://1.bp.blogspot.com/-FtyIjfFokzQ/U__h1sAoEEI/AAAAAAAAAR0/URuVhX9cR-E/s1600/landmarked_face2.png)
+

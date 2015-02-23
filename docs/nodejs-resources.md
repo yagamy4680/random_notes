@@ -238,3 +238,40 @@ This module:
 1. The Symlink
 2. The Global
 3. The Module
+
+[10 steps to nodejs nirvana in production](http://qzaidi.github.io/2013/05/14/node-in-production/)
+
+1. Use upstart
+2. Use cluster for multi-core environments
+3. Use (re)cluster for zero downtime deployments
+4. Heartbeat Checks
+5. Automated deployments with deploy.sh
+6. Set listen backlog, max agents and max open files limit.
+7. Redis with hiredis.
+8. Profile often, with the v8 profiler.
+9. Enable GOD Mode with REPL
+
+[Production Practices](http://www.joyent.com/developers/node/deploy), from Joyent
+
+1. Cluster
+2. Domains ([Domain](http://nodejs.org/api/domain.html) is a useful module built into the core of Node that allows developers to gracefully handle unexpected errors for asynchronous events.)
+3. Deploying New Versions
+4. Service Management
+5. Dependency Management
+
+[Best Practices for Deploying Node.js in Production](http://strongloop.com/strongblog/node-js-deploy-production-best-practice/)
+
+1. Build your dependencies into your deployable packages
+2. Be able to push deploys
+3. Deploy and run your app inside a supervisor/manager
+4. Use composable tools
+
+[Error Handling in Node.js](https://www.joyent.com/developers/node/design/errors)
+
+1. **Background**: what you're expected to know already.
+2. **Operational errors vs. programmer errors**: introduction to two fundamentally different kinds of errors
+3. **Patterns for writing functions**: general principles for writing functions that produce useful errors
+4. **Specific recommendations for writing new functions**: a checklist of specific guidelines for writing robust functions that produce useful errors
+5. **An example**: example documentation and preamble for a connect function
+6. **Summary**: a summary of everything up to this point
+7. **Appendix**: Conventional properties for Error objects: a list of property names to use for providing extra information in a standard way
