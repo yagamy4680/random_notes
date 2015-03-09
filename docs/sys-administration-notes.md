@@ -436,6 +436,10 @@ I modified `/etc/init/failsafe.conf`, and comment out all `sleep` statements, th
 
 #### [How to setup an Access Point mode Wi-Fi Hotspot?](http://askubuntu.com/questions/180733/how-to-setup-an-access-point-mode-wi-fi-hotspot)
 
-`echo 1| sudo tee /proc/sys/net/ipv4/ip_forward`
-`sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o ppp0 -j MASQUERADE`
+```bash
+ifconfig eth0 192.168.20.1 netmask 255.255.255.0 up
+echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -s 192.168.20.0/24 -o wlan0 -j MASQUERADE
+```
+
 
