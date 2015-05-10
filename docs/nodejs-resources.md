@@ -51,7 +51,7 @@ Status and error messages can be displayed as desktop notification using either 
 
 ![](https://github-camo.global.ssl.fastly.net/7adb738e7a64557d92556307614cce7bad510f39/687474703a2f2f66676e6173732e6769746875622e636f6d2f696d616765732f6e6f64652d6465762e706e67)
 
-#### [nw-desktop-notifications](https://github.com/robrighter/nw-desktop-notifications), Simple cross platform desktop notifications for node-webkit
+#### [nw-desktop-notifications](https://github.com/robrighter/nw-desktop-notifications), Simple cross platform desktop notifications for node-passbook
 
 ```javascript
 window.LOCAL_NW.desktopNotifications.notify(iconUrl, title, content, clickHandlerCallback);
@@ -223,6 +223,10 @@ This module:
 
 #### [jeieba](https://github.com/fxsjy/jieba), 结巴中文分词
 "结巴"中文分词：做最好的 Python 中文分词组件 "Jieba" (Chinese for "to stutter") Chinese text segmentation: built to be the best Python Chinese word segmentation module.
+
+#### [dnsd](https://github.com/jhs/dnsd), Dynamic authoritative name server
+
+#### [electron](https://github.com/atom/electron), Build cross platform desktop apps with web technologies, (an alternative to node-webkit, from GitHub Atom project)
 
 #### Bootstrap templates
 

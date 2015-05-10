@@ -289,3 +289,8 @@ https://github.com/kikohs/freak/blob/master/demo/freak_demo.cpp
 [Real-Time Face Pose Estimation](http://blog.dlib.net/2014/08/real-time-face-pose-estimation.html)
 ![](http://1.bp.blogspot.com/-FtyIjfFokzQ/U__h1sAoEEI/AAAAAAAAAR0/URuVhX9cR-E/s1600/landmarked_face2.png)
 
+### Articles
+
+[Sliding Windows for Object Detection with Python and OpenCV](https://www.pyimagesearch.com/2015/03/23/sliding-windows-for-object-detection-with-python-and-opencv/)
+
+![](http://www.pyimagesearch.com/wp-content/uploads/2015/03/sliding-window-animated-adrian.gif)

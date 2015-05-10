@@ -233,3 +233,24 @@ Run in isolated containers. Share with collaborators. Migrate between devices. (
 ### Best Practices & Principles
 
 [程式碼準則 - 開發出靈活、穩定、可持續發展的 HTML 與 CSS 標準。](http://lisp.es/code-guide/)
+
+[Eight Docker Development Patterns](http://www.hokstad.com/docker/patterns), 2014/10/22
+
+[docker容器的一些概念辨析](http://yayua.github.io/docker/some-concepts-of-docker-containers/), to compare ENTRYPOINT and CMD 
+
+### Minimal Docker
+
+[docker-alpine](https://github.com/gliderlabs/docker-alpine), Docker image based on Alpine Linux will help you win at minimalism
+
+```text
+REPOSITORY          TAG           IMAGE ID          VIRTUAL SIZE
+gliderlabs/alpine   latest        157314031a17      5.03 MB
+debian              latest        4d6ce913b130      84.98 MB
+ubuntu              latest        b39b81afc8ca      188.3 MB
+centos              latest        8efe422e6104      210 MB
+```
+
+[追求極簡化 Docker image 之路](http://william-yeh.github.io/docker-mini/#1) => Quest for minimal Docker images (yagamy: Great article, good for docker applications on embedded system).
+
+[How I shrunk a Docker image by 98.8% – featuring fanotify](https://blog.jtlebi.fr/2015/04/25/how-i-shrunk-a-docker-image-by-98-8-featuring-fanotify/)
+
