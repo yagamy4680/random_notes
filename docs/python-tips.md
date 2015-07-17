@@ -69,6 +69,52 @@ p.contents.bar = 17
 
 [把 pointer to a C function 放進 ctypes Structure](https://groups.google.com/forum/#!topic/pythontw/jMfm-ZgxpNY), contains VERY USEFUL information about using ctypes to deal with pointers!!
 
+
+Processing messages from a child process thorough stderr and stdout with Python
+http://stackoverflow.com/questions/4805576/processing-messages-from-a-child-process-thorough-stderr-and-stdout-with-python
+
+```python
+def print_pipe(type_pipe,pipe):
+    for line in iter(pipe.readline, ''):
+         print "[%s] %s"%(type_pipe,line),
+
+p = Popen(cmd, bufsize=1024,
+stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True)
+
+t1 = Thread(target=print_pipe, args=("stdout",p.stdout,))
+t1.start()
+t2 = Thread(target=print_pipe, args=("stderr",p.stderr,))
+t2.start()
+
+#optionally you can join the threads to wait till p is done. This is avoidable but it 
+# really depends on the application.
+t1.join()
+t2.join()
+```
+
+subprocess – Work with additional processes
+http://pymotw.com/2/subprocess/
+
+The ever useful and neat subprocess module
+http://sharats.me/the-ever-useful-and-neat-subprocess-module.html#watching-both-stdout-and-stderr
+
+Merge with current environment
+```python
+p = Popen('command', env=dict(os.environ, my_env_prop='value'))
+```
+
+Inside Python subprocess communication
+http://znasibov.info/blog/inside_python_subprocess_communication.html
+
+Subprocess Module
+http://www.bogotobogo.com/python/python_subprocess_module.php
+
+Non blocking reading from a subprocess output stream in Python
+http://eyalarubas.com/python-subproc-nonblock.html
+
+
+
+
 ### Open Source Projects
 
 [Autobahn](https://github.com/yOPERO/Autobahn), Python Twisted WebSockets plus RPC / PubSub.
