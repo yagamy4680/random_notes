@@ -1,3 +1,5 @@
+## Tips
+
 ### Macro Variant Parameters
 
 ```c++
@@ -17,17 +19,40 @@
 ```
 
 
-**Simple Popen2 Implementation**
-
-[http://dzone.com/snippets/simple-popen2-implementation](http://dzone.com/snippets/simple-popen2-implementation)
-
-popen2 implementation. This is similar to popen, but allows for bidirectional communication with the application being executed.
 
 
+
+
+## LibC
 
 ### musl libc
 
 [musl libc](http://www.musl-libc.org/), a new standard library to power a new generation of Linux-based devices. musl is lightweight, fast, simple, free, and strives to be correct in the sense of standards-conformance and safety.
 
 [Comparison of C/POSIX standard library implementations for Linux](http://www.etalabs.net/compare_libcs.html)
-	
+
+### Malloc implementations
+
+- [C-Malloc-Implementation](https://github.com/tomelm/C-Malloc-Implementation), An implementation of the malloc library in C for a homework assignment
+- [dlmalloc](http://gee.cs.oswego.edu/pub/misc/malloc.c), malloc/free/realloc written by
+  Doug Lea and released to the public domain (Version 2.8.6 Wed Aug 29 06:57:58 2012  Doug Lea), the design is explained [here](http://g.oswego.edu/dl/html/malloc.html)
+- [Tlsf](http://tlsf.baisoku.org/)
+  - O(1) cost for malloc, free, realloc, memalign, which could be important for real-time systems,
+  - Extremely low overhead per allocation (4 bytes),
+  - Low overhead per pool (~3kB),
+  - Low fragmentation,
+  - And it compiles to only a few kB of code and data, But if you have only a few KB to work with, this RAM memory overhead is still too much…
+- [Memory manager](https://github.com/eliben/code-for-blog/tree/master/2008/memmgr), provides memory from a fixed pool that is allocated statically at link-time. Useful for embedded systems, where dynamic allocation is not always supported.
+
+http://g.oswego.edu/dl/html/malloc.html
+
+A good article [Open source implementations of malloc](http://www.rtos.be/2014/05/open-source-implementations-of-malloc/) shall be read.
+
+
+## System
+
+### Simple Popen2 Implementation
+
+[http://dzone.com/snippets/simple-popen2-implementation](http://dzone.com/snippets/simple-popen2-implementation)
+
+popen2 implementation. This is similar to popen, but allows for bidirectional communication with the application being executed.
