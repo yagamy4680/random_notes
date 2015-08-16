@@ -19,6 +19,14 @@
 ```
 
 
+### StackTrace
+
+[google-breakpad](https://code.google.com/p/google-breakpad/wiki/GettingStartedWithBreakpad)
+
+Breakpad is a library and tool suite that allows you to distribute an application to users with compiler-provided debugging information removed, record crashes in compact "minidump" files, send them back to your server, and produce C and C++ stack traces from these minidumps.
+
+![](http://google-breakpad.googlecode.com/svn/wiki/breakpad.png)
+
 
 
 
@@ -30,6 +38,7 @@
 [musl libc](http://www.musl-libc.org/), a new standard library to power a new generation of Linux-based devices. musl is lightweight, fast, simple, free, and strives to be correct in the sense of standards-conformance and safety.
 
 [Comparison of C/POSIX standard library implementations for Linux](http://www.etalabs.net/compare_libcs.html)
+
 
 ### Malloc implementations
 

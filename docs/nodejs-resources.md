@@ -228,6 +228,30 @@ This module:
 
 #### [electron](https://github.com/atom/electron), Build cross platform desktop apps with web technologies, (an alternative to node-webkit, from GitHub Atom project)
 
+#### [Socket.IO P2P](http://socket.io/blog/socket.io-p2p/), provides an easy and reliable way to setup a WebRTC connection between peers and communicate using the socket.io-protocol.
+
+![](https://cldup.com/95U80xyuHq.svg)
+
+#### [Schyntax](https://github.com/schyntax/schyntax), a domain-specific language for defining event schedules in a terse, but readable, format.
+
+![](https://avatars1.githubusercontent.com/u/8682785?v=2&s=200)
+
+- [Schyntax Part 1: The Language](http://bret.codes/schyntax-part-1/)
+- [Schyntax Part 2: The Task Runner](http://bret.codes/schyntax-part-2/)
+- [js-schtick](https://github.com/schyntax/js-schtick), A Node.js scheduled task runner built on top of schyntax.
+
+```js
+var Schtick = require('schtick');
+
+var schtick = new Schtick(); // best practice is to keep a singleton Schtick instance
+
+schtick.addTask('unique task name', 'minutes(*)', function (task, eventTime) {
+  console.log(task.name + ' ' + eventTime);
+});
+```
+
+
+
 #### Bootstrap templates
 
 - http://startbootstrap.com/popular-templates

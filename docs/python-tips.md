@@ -92,34 +92,33 @@ t1.join()
 t2.join()
 ```
 
-subprocess – Work with additional processes
-http://pymotw.com/2/subprocess/
+[subprocess](http://pymotw.com/2/subprocess/) – Work with additional processes
 
-The ever useful and neat subprocess module
-http://sharats.me/the-ever-useful-and-neat-subprocess-module.html#watching-both-stdout-and-stderr
+
+[The ever useful and neat subprocess module](http://sharats.me/the-ever-useful-and-neat-subprocess-module.html#watching-both-stdout-and-stderr)
 
 Merge with current environment
+
 ```python
 p = Popen('command', env=dict(os.environ, my_env_prop='value'))
 ```
 
-Inside Python subprocess communication
-http://znasibov.info/blog/inside_python_subprocess_communication.html
+[Inside Python subprocess communication](http://znasibov.info/blog/inside_python_subprocess_communication.html)
 
-Subprocess Module
-http://www.bogotobogo.com/python/python_subprocess_module.php
+[Subprocess Module](http://www.bogotobogo.com/python/python_subprocess_module.php)
 
-Non blocking reading from a subprocess output stream in Python
-http://eyalarubas.com/python-subproc-nonblock.html
+[Non blocking reading from a subprocess output stream in Python](http://eyalarubas.com/python-subproc-nonblock.html)
 
 
 
 
 ### Open Source Projects
 
-[Autobahn](https://github.com/yOPERO/Autobahn), Python Twisted WebSockets plus RPC / PubSub.
+- [Autobahn](https://github.com/yOPERO/Autobahn), Python Twisted WebSockets plus RPC / PubSub.
 
-[pyrasite](http://pyrasite.com/), Tools for injecting code into running Python processes.
+- [pyrasite](http://pyrasite.com/), Tools for injecting code into running Python processes.
+
+- [PyFormat](http://pyformat.info/), Python has had awesome string formatters for many years but the documentation on them is far too theoretic and technical. With this site we try to show you the most common use-cases covered by the old and new style string formatting API with practical examples.
 
 
 ### Articles

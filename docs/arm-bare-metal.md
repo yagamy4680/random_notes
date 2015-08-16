@@ -1,3 +1,14 @@
+### RPi - Bare Metal Programming in C
+
+- [part1](http://www.valvers.com/open-software/raspberry-pi/step01-bare-metal-programming-in-cpt1/), toolchain
+- [part2](http://www.valvers.com/open-software/raspberry-pi/step02-bare-metal-programming-in-c-pt2/), c runtime
+- [part3](http://www.valvers.com/open-software/raspberry-pi/step03-bare-metal-programming-in-c-pt3/), cmake
+- [part4](http://www.valvers.com/open-software/raspberry-pi/step04-bare-metal-programming-in-c-pt4/), interrupts
+
+
+
+
+
 [在 Cortex-M3 上運用 CodeSourcery 裸機工具鏈](http://cms.mcuapps.com/tooltips/tt0004/)
 ```bash
 $ arm-none-eabi-gcc -mthumb -march=armv7 -mfix-cortex-m3-ldrd \

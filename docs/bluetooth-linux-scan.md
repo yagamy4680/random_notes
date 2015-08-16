@@ -152,7 +152,7 @@ int main()
 And, compile it with following commands:
 
 ```bash
-$ apt-get install libncurses5-dev -y
+$ apt-get install libncurses5-dev libbluetooth-dev -y
 $ gcc -o scan -I`pkg-config --cflags ncurses` ./scan.c -lbluetooth `pkg-config --libs ncurses`
 ```
 
