@@ -1,3 +1,134 @@
+### Tools for profiling your Python / Django project
+
+https://vinta.ws/code/tools-for-profiling-your-python-django-project.html
+
+- [timer](https://docs.python.org/2/library/timeit.html)
+- [pycallgraph](https://pycallgraph.readthedocs.org/en/latest/)
+- [cProfile](https://vinta.ws/code/tools-for-profiling-your-python-django-project.html)
+- [line_profiler](https://github.com/rkern/line_profiler)
+- [memory_profiler](https://pypi.python.org/pypi/memory_profiler)
+
+
+
+### Python Tutorial: Comprehensions
+
+Comprehension and Generator Syntax
+
+```python
+[transform(datum) for datum in iterable if valid(datum)]
+{transform(datum) for datum in iterable if valid(datum)}
+{keyFun(key): valFun(val) for key,val in iterable.items() if valid(key,val)}
+(transform(datum) for datum in iterable if valid(datum))
+```
+
+List comprehensions
+
+```python
+def listComprehension(source, transform, conditional=lambda x: True):
+    """
+    Canonical use of a list comprehension produces a completely generated
+    list of values derived from elements in a source container
+    for elements that obey a condition.
+    """
+    return [
+            transform(element)       # An operation on an element
+            for element in source    # applied to elements from the source
+            if conditional(element)  # for elements meeting a condition.
+           ]
+```
+
+```python
+def stripped(x):
+    return x.strip()
+
+def conditional(x):
+    return stripped(x)
+
+def Test3(filename='test.txt'):
+    # Three ways of doing the same thing: two cumbersome and one elegant.
+    container1 = []
+    with open(filename) as source:
+        for line in source:
+            if conditional(line.strip()):
+                container1.append(line.strip())
+    container2 = listComprehension(open(filename), stripped, conditional)
+    container3 = [stripped(line) for line in open(filename) if conditional(line)]
+    # Proof
+    assert container1 == container2 == container3
+
+Test3()
+```
+
+
+### Python Tips and Traps
+
+https://www.airpair.com/python/posts/python-tips-and-traps
+
+- The Humble `enumerate`
+- A member of `set`
+- collections.namedtuple
+- collections.defaultdict
+- Generators
+
+#### Control Flow
+
+```python
+try:
+    db.commit() # may raise exception
+except Exception:
+    log.warn("Failure committing transaction, rolling back")
+    db.rollback()
+else:
+    log.info("Saved the new FOO")
+finally:
+    db.close()
+```
+
+We've actually added two clauses here. First, let's look at the `else`, which runs if no exception occurs. In our example, all it does is log that the transaction succeeded, but you could put more interesting actions in as needed. One potential use would be to fire off a background job or notification.
+
+The `finally` clause is there to make it clear that the `db.close()` will always run. Looking back, we can see that all the code related to persisting our data ended up in a nice logical grouping at the same indentation level. Editing this code later, it will be easy for us to see that all these lines are tied to the `commit`.
+
+
+#### Context and Control
+
+```python
+class DatabaseTransaction(object):
+    def __init__(self, connection_info):
+        self.conn = db_library.connect(connection_info)
+
+    def __enter__(self):
+        return self.conn
+```
+
+The `__enter__` method actually does nothing except return the database connection, which we can use inside the block to retrieve or save data. The `__init__` method is where the connection is actually made, and if it fails the block won't run at all.
+
+Now let's define how the transaction will be finished in the `__exit__` method. This has a lot more to it, since it has to handle any exceptions thrown in the block and close out the transaction.
+
+```python
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type is not None:
+            self.conn.rollback()
+
+        try:
+            self.conn.commit()
+        except Exception:
+            self.conn.rollback()
+        finally:
+            self.conn.close()
+```
+
+Now we can use our DatabaseTransaction as the context manager for our block of actions. Under the hood, the `__enter__` and `__exit__` methods will run and handle setting up the database connection and tear it down when we're through.
+
+```python
+# context manager
+with DatabaseTransaction("fakesql://") as db:
+    # retrieve data here
+    # modify data here
+```
+
+
+
+
 
 ### Python
 
@@ -33,6 +164,7 @@
 28. 別用 implicit relative imports
 29. Convenience Imports
 30. Python 之禪
+
 
 ### ctypes
 
@@ -108,6 +240,14 @@ p = Popen('command', env=dict(os.environ, my_env_prop='value'))
 [Subprocess Module](http://www.bogotobogo.com/python/python_subprocess_module.php)
 
 [Non blocking reading from a subprocess output stream in Python](http://eyalarubas.com/python-subproc-nonblock.html)
+
+
+### UI Framework
+
+#### Kivy
+
+[Kivy](http://kivy.org/#home) - Open source Python library for rapid development of applications
+that make use of innovative user interfaces, such as multi-touch apps.
 
 
 

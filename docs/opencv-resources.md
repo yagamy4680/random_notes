@@ -294,3 +294,8 @@ https://github.com/kikohs/freak/blob/master/demo/freak_demo.cpp
 [Sliding Windows for Object Detection with Python and OpenCV](https://www.pyimagesearch.com/2015/03/23/sliding-windows-for-object-detection-with-python-and-opencv/)
 
 ![](http://www.pyimagesearch.com/wp-content/uploads/2015/03/sliding-window-animated-adrian.gif)
+
+
+[End-to-end people detection in crowded scenes](http://gitxiv.com/posts/XfyFioDSPShmNgv7W/end-to-end-people-detection-in-crowded-scenes)
+
+- https://github.com/Russell91/ReInspect/blob/master/evaluation_reinspect.ipynb
