@@ -29,6 +29,13 @@ Breakpad is a library and tool suite that allows you to distribute an applicatio
 
 
 
+### Misc
+
+#### [qrintf](https://github.com/h2o/qrintf), sprintf accelerator
+
+The sprintf(3) family is a great set of functions for stringifying various kinds of data. The drawback is that they are slow. In certain applications, more than 10% of CPU time is consumed by the functions. The reason why it is slow is because it parses the given format at run-time.
+
+qrintf is a preprocessor (and a set of runtime functions) that precompiles invocations of sprintf (and snprintf) with constant format strings into specialized forms.
 
 
 ## LibC

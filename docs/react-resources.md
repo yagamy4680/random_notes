@@ -2,6 +2,11 @@
 
 - [Sample Mobile Application with React and Cordova](http://coenraets.org/blog/2014/12/sample-mobile-application-with-react-and-cordova/)
 
+## Articles collected at 2015/8/16
+
+- [Flux For Stupid People](http://blog.andrewray.me/flux-for-stupid-people/)
+- [ReactJS For Stupid People](http://blog.andrewray.me/reactjs-for-stupid-people/)
+
 ## Articles collected at 2015/5/10
 
 [The React.js Way: Getting Started Tutorial](http://blog.risingstack.com/the-react-way-getting-started-tutorial/?utm_source=Facebook&utm_medium=reactjs&utm_campaign=reactguide)

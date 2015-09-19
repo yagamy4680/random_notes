@@ -1,4 +1,6 @@
-Time series database ([definitions from wikipedia](http://en.wikipedia.org/wiki/Time_series_database))
+## Time series database 
+
+[Definitions from wikipedia](http://en.wikipedia.org/wiki/Time_series_database):
 
 - [InfluxDB](http://influxdb.com/)
 - [SkyDB](http://skydb.io/guide/)
@@ -7,6 +9,26 @@ Time series database ([definitions from wikipedia](http://en.wikipedia.org/wiki/
 - [Geras](http://1248.io/geras.php)
 - [OpenTSDB](http://opentsdb.net/)
 - [KairosDB](https://code.google.com/p/kairosdb/)
+
+
+## Time-series database and/or Monitoring system
+
+### [Prometheus](http://prometheus.io/)
+
+An open-source service monitoring system and time series database.
+
+Alerting rules are defined in the following syntax:
+
+```text
+ALERT <alert name>
+  IF <expression>
+  [FOR <duration>]
+  [WITH <label set>]
+  SUMMARY "<summary template>"
+  DESCRIPTION "<description template>"
+```
+
+
 
 
 #### Articles
