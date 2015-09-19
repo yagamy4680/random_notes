@@ -1,3 +1,11 @@
+## React Native
+
+[EXPONENT](http://exponentjs.com/), An app for React Native developers
+
+- With Exponent, you can write React Native experiences with any computer and a text editor and a phone. No need for Xcode or even a simulator. Download the app now to get started.
+- [XDE](https://github.com/exponentjs/xde), The Exponent Development Environment
+
+
 ## React for Mobile
 
 - [Sample Mobile Application with React and Cordova](http://coenraets.org/blog/2014/12/sample-mobile-application-with-react-and-cordova/)

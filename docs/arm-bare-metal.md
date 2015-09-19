@@ -6,10 +6,46 @@
 - [part4](http://www.valvers.com/open-software/raspberry-pi/step04-bare-metal-programming-in-c-pt4/), interrupts
 
 
+### Cross Compiler Tips
+
+[LLVM Cross-Compiler](http://wiki.osdev.org/LLVM_Cross-Compiler)
+
+For example, for cross compiling to ARM, you can use:
+
+```bash
+-march=armv7-a -mfloat-abi=soft -ccc-host-triple arm-elf
+```
+
+Since 3.1, it can be shortened to
+
+```bash
+-target armv7--eabi -mcpu=cortex-a9
+```
+
+
+- `-ffreestanding`, Indicated that the file should be compiled for a freestanding enviroment (like a kernel), not a hosted (userspace), environment.
+- `-fno-builtin`, Disable special handling and optimizations of builtin functions like strlen and malloc.
+- `-nostdlib`, Disables standard library
+- `-nostdinc`, Makes sure the standard library headers are not included.
+- `-nostdinc++`, Makes sure the standard C++ library headers are not included. This makes sense if you build a custom version of libc++ and want to avoid including system one.
+
+
+
+### Cortex-M
+
+[Arm Cortex M3 Bare Metal With Newlib](http://sushihangover.github.io/arm-cortex-m3-bare-metal-with-newlib/)
+
+I am working on a custom NEWLIB but first I wanted to make sure that NEWLIB compiled for ARM-NONE-EABI works out of the box with my ARM bare-metal Clang/LLVM build and qemu.
+
+[Semihosting with ARM, GCC, and OpenOCD](http://bgamari.github.io/posts/2014-10-31-semihosting.html)
+
+[Tail-Chaining ARM Cortex-M0 Interrupts](https://embeddedfreak.wordpress.com/2010/10/19/tail-chaining-arm-cortex-m0-interrupts/)
+
 
 
 
 [在 Cortex-M3 上運用 CodeSourcery 裸機工具鏈](http://cms.mcuapps.com/tooltips/tt0004/)
+
 ```bash
 $ arm-none-eabi-gcc -mthumb -march=armv7 -mfix-cortex-m3-ldrd \
   -T lm3s6965.ld main.c reset.S syscalls.c -o main
@@ -98,4 +134,17 @@ exit
 sudo rm $targetdir/etc/resolv.conf
 sudo rm $targetdir/usr/bin/qemu-arm-static
 ```
+
+
+### libc
+
+[Comparison of C/POSIX standard library implementations for Linux](http://www.etalabs.net/compare_libcs.html)
+
+| Library | Size | Licenses |
+|---|---|---|
+| [musl](http://www.musl-libc.org/) | 426K | [MIT](http://git.musl-libc.org/cgit/musl/tree/COPYRIGHT) |
+| [uClibc](http://www.uclibc.org/) | 500K | |
+| [dietlibc](http://www.fefe.de/dietlibc/) | 120K | [GPL v2](https://github.com/ensc/dietlibc/blob/master/COPYING) |
+| [glibc](http://www.gnu.org/software/libc/) | 2.0M | GPL |
+| [bionic](https://github.com/android/platform_bionic) | ... | Apache |
 
