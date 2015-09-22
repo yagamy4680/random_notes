@@ -285,10 +285,48 @@ sudo rm $targetdir/usr/bin/qemu-arm-static
 
 ### Linker Script
 
-[rtenv的linker script解釋](http://wen00072-blog.logdown.com/posts/247207-rtenv-linker-script-explained)
+- [rtenv的linker script解釋](http://wen00072-blog.logdown.com/posts/247207-rtenv-linker-script-explained)
+- [GNU ld的linker script簡介](http://www.slideshare.net/zzz00072/gnu-ldlinker-script)
+- [窺探 .bss section](http://blog.linux.org.tw/~jserv/archives/002030.html)
+- [.bss section 的觀念：執行時期的長度](http://www.jollen.org/blog/2006/12/bss_section_2.html)
+- [GNU LD 手冊略讀 (1): Chapter 3 ~ Chapter 3.5](http://wen00072-blog.logdown.com/posts/246069-study-on-the-linker-script-1)
+- [GNU LD 手冊略讀 (2): Chapter 3.6 SETCIONS](http://wen00072-blog.logdown.com/posts/246070-study-on-the-linker-script-2-setcion-command)
+- [GNU LD 手冊略讀 (3): Chapter 3.7 ~ Chapter 3.11](http://wen00072-blog.logdown.com/posts/246071-study-on-the-linker-script-3)
+- [Linux中使用C語言載入data object 檔案資料](http://wen00072-blog.logdown.com/posts/194317-loads-the-data-object-using-the-c-language-archives-data-in-linux)
+- [Linux中使用C語言載入data object 檔案資料 (續）](http://wen00072-blog.logdown.com/posts/194370-load-linux-using-c-language-data-object-archives-data-continued)
+- [The Dark Art of Linker Scripts](http://blogs.bu.edu/md/2011/11/15/the-dark-art-of-linker-scripts/)
 
 
+[Linker Script: Put a particular file at a later position](http://stackoverflow.com/questions/21418593/linker-script-put-a-particular-file-at-a-later-position)
 
+```c
+void foo() __attribute__ ((section(".specialmem")));
+```
+
+```text
+.specialmem:
+{
+    *(.specialmem)
+} >specialMemBlock
+```
+
+
+http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0474i/CHDBIJJD.html
+
+Example 3. Importing a linker-defined symbol
+
+```c
+extern unsigned int Image$$ZI$$Limit;
+config.heap_base = (unsigned int) &Image$$ZI$$Limit;
+```
+
+Example 4. Importing symbols that define a ZI output section
+
+```c
+extern unsigned int Image$$ZI$$Length;
+extern char Image$$ZI$$Base[];
+memset(Image$$ZI$$Base, 0, (unsigned int)&Image$$Length);
+```
 
 ### libc
 
