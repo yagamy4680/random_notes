@@ -1,5 +1,31 @@
 # Golang Resources
 
+## [go-coreutils](https://github.com/EricLagerg/go-coreutils)
+
+A cross-platform port of GNU's coreutils to Go
+
+16/100
+
+| Utility | Completeness   | Cross Platform      | Need Refactor|
+|:--------|:---------------|:--------------------|:-------------|
+| cat     | 100%           | Yes (Unix/Windows)  | No           |
+| chown   | 10% (* see note #1) | No             | Yes (-R)     |
+| env     | 100%           | Yes (Unix/Windows)  | No           |
+| false   | 100%           | Yes (Unix/Windows)  | No           |
+| logname | 100%           | No                  | No           |
+| pwd     | 100%           | Yes (Unknown)       | No           |
+| sync    | 100%           | Yes (Unix/Windows)  | No           |
+| true    | 100%           | Yes (Unix/Windows)  | No           |
+| tsort   | 100%           | Yes (Unix/Windows)  | No           |
+| tty     | 100%           | Yes (Unix/Windows)  | No           |
+| uname   | 100%           | No                  | No           |
+| uptime  | 90%            | Yes (Unix/Window, no FreeBSD)   | No           |
+| wc      | 100%           | Yes (Unix/Windows)  | No           |
+| whoami  | 100%           | Yes (Unix/Windows   | No           |
+| xxd     | 100%           | Yes (Unix/Windows)  | No           |
+| yes     | 100%           | Yes (Unix/Windows)  | No           |
+
+
 ## [godebug](https://github.com/mailgun/godebug)
 
 A cross-platform debugger for Go.
@@ -49,4 +75,7 @@ A project based build tool for the Go programming language
 
 Apache License v2 - Amazon S3 Compatible - Written in Go
 
-    
+## Articles
+
+[Scope and Shadowing in Go](http://blog.charmes.net/2015/06/scope-and-shadowing-in-go.html)
+

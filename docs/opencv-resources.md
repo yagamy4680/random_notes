@@ -1,5 +1,13 @@
 [[_TOC_]]
 
+### Articles at 2015/Sep
+
+[Camouflage from face detection](http://cvdazzle.com/)
+
+![](http://cvdazzle.com/assets/img/feature-left.jpg)
+![](http://cvdazzle.com/assets/img/feature-right.jpg)
+
+
 ### Installation
 
 http://hanmajor.blogspot.tw/2013/10/linux-ubuntu-opencv.html

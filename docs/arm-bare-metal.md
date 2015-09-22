@@ -5,6 +5,87 @@
 - [part3](http://www.valvers.com/open-software/raspberry-pi/step03-bare-metal-programming-in-c-pt3/), cmake
 - [part4](http://www.valvers.com/open-software/raspberry-pi/step04-bare-metal-programming-in-c-pt4/), interrupts
 
+### Blog Posts
+
+[Bare Metal](https://balau82.wordpress.com/tag/bare-metal/)
+
+- [Flashing the STM32-P152 board with OpenOCD](https://balau82.wordpress.com/2013/08/14/flashing-the-stm32-p152-board-with-openocd/)
+- [ARM926 interrupts in QEMU](https://balau82.wordpress.com/2012/04/15/arm926-interrupts-in-qemu/)
+- [Using Newlib in ARM bare metal programs](https://balau82.wordpress.com/2010/12/16/using-newlib-in-arm-bare-metal-programs/)
+- [QEMU ARM semihosting](https://balau82.wordpress.com/2010/11/04/qemu-arm-semihosting/)
+
+[Emulating ARM PL011 serial ports](https://balau82.wordpress.com/2010/11/30/emulating-arm-pl011-serial-ports/)
+
+```c
+#include <stdint.h>
+ 
+typedef volatile struct {
+ uint32_t DR;
+ uint32_t RSR_ECR;
+ uint8_t reserved1[0x10];
+ const uint32_t FR;
+ uint8_t reserved2[0x4];
+ uint32_t LPR;
+ uint32_t IBRD;
+ uint32_t FBRD;
+ uint32_t LCR_H;
+ uint32_t CR;
+ uint32_t IFLS;
+ uint32_t IMSC;
+ const uint32_t RIS;
+ const uint32_t MIS;
+ uint32_t ICR;
+ uint32_t DMACR;
+} pl011_T;
+ 
+enum {
+ RXFE = 0x10,
+ TXFF = 0x20,
+};
+ 
+pl011_T * const UART0 = (pl011_T *)0x101f1000;
+pl011_T * const UART1 = (pl011_T *)0x101f2000;
+pl011_T * const UART2 = (pl011_T *)0x101f3000;
+ 
+static inline char upperchar(char c) {
+ if((c >= 'a') && (c <= 'z')) {
+  return c - 'a' + 'A';
+ } else {
+  return c;
+ }
+}
+ 
+static void uart_echo(pl011_T *uart) {
+ if ((uart->FR & RXFE) == 0) {
+  while(uart->FR & TXFF);
+  uart->DR = upperchar(uart->DR);
+ }
+}
+ 
+void c_entry() {
+ for(;;) {
+  uart_echo(UART0);
+  uart_echo(UART1);
+  uart_echo(UART2);
+ }
+}
+```
+
+[Arm Cortex M3 Bare Metal With Newlib](http://sushihangover.github.io/arm-cortex-m3-bare-metal-with-newlib/)
+
+[An ARM Bare Metal Hello World Using Musl](http://ellcc.org/blog/?p=2389)
+
+[Installing QEMU on OS X](https://github.com/psema4/pine/wiki/Installing-QEMU-on-OS-X)
+
+[Llvm, Cmsis Dsp And Cortex M3 & M0](http://sushihangover.github.io/llvm-cmsis-dsp-and-cortex-m3-and-m0/)
+
+
+[SushiHangover - Bare Metal](http://sushihangover.github.io/blog/categories/bare-metal/)
+
+- [LLVM Bare Metal GitSlave](https://github.com/sushihangover/llvm_baremetal) (github)
+- [QEMU mirror with Cortex-Mx additions](https://github.com/sushihangover/qemu) (github)
+- [Bkpt: Printf Service Calls On The Cortex M0](http://sushihangover.github.io/bkpt-service-calls-on-the-cortex-m0/)
+
 
 ### Cross Compiler Tips
 
@@ -22,13 +103,80 @@ Since 3.1, it can be shortened to
 -target armv7--eabi -mcpu=cortex-a9
 ```
 
-
 - `-ffreestanding`, Indicated that the file should be compiled for a freestanding enviroment (like a kernel), not a hosted (userspace), environment.
 - `-fno-builtin`, Disable special handling and optimizations of builtin functions like strlen and malloc.
 - `-nostdlib`, Disables standard library
 - `-nostdinc`, Makes sure the standard library headers are not included.
 - `-nostdinc++`, Makes sure the standard C++ library headers are not included. This makes sense if you build a custom version of libc++ and want to avoid including system one.
 
+[Cortex-M0 Linker Script for CMSIS](https://github.com/sushihangover/llvm_baremetal/blob/master/examples/arm/M0_CMSIS_DSP/src/cortex_M0.ld)
+
+
+
+
+[ARM Embedded (Bare Metal)](http://www.cryptopp.com/wiki/ARM_Embedded_(Bare_Metal))
+
+Architecture Options for `arm-none-eabi-gcc`:
+
+```text
+--------------------------------------------------------------------
+| ARM Core | Command Line Options                       | multilib |
+|----------|--------------------------------------------|----------|
+|Cortex-M0+| -mthumb -mcpu=cortex-m0plus                | armv6-m  |
+|Cortex-M0 | -mthumb -mcpu=cortex-m0                    |          |
+|Cortex-M1 | -mthumb -mcpu=cortex-m1                    |          |
+|          |--------------------------------------------|          |
+|          | -mthumb -march=armv6-m                     |          |
+|----------|--------------------------------------------|----------|
+|Cortex-M3 | -mthumb -mcpu=cortex-m3                    | armv7-m  |
+|          |--------------------------------------------|          |
+|          | -mthumb -march=armv7-m                     |          |
+|----------|--------------------------------------------|----------|
+|Cortex-M4 | -mthumb -mcpu=cortex-m4                    | armv7e-m |
+|(No FP)   |--------------------------------------------|          |
+|          | -mthumb -march=armv7e-m                    |          |
+|----------|--------------------------------------------|----------|
+|Cortex-M4 | -mthumb -mcpu=cortex-m4 -mfloat-abi=softfp | armv7e-m |
+|(Soft FP) | -mfpu=fpv4-sp-d16                          | /softfp  |
+|          |--------------------------------------------|          |
+|          | -mthumb -march=armv7e-m -mfloat-abi=softfp |          |
+|          | -mfpu=fpv4-sp-d16                          |          |
+|----------|--------------------------------------------|----------|
+|Cortex-M4 | -mthumb -mcpu=cortex-m4 -mfloat-abi=hard   | armv7e-m |
+|(Hard FP) | -mfpu=fpv4-sp-d16                          | /fpu     |
+|          |--------------------------------------------|          |
+|          | -mthumb -march=armv7e-m -mfloat-abi=hard   |          |
+|          | -mfpu=fpv4-sp-d16                          |          |
+|----------|--------------------------------------------|----------|
+|Cortex-R4 | [-mthumb] -march=armv7-r                   | armv7-ar |
+|Cortex-R5 |                                            | /thumb   |
+|Cortex-R7 |                                            | 	   |
+|(No FP)   |                                            |          |
+|----------|--------------------------------------------|----------|
+|Cortex-R4 | [-mthumb] -march=armv7-r -mfloat-abi=softfp| armv7-ar |
+|Cortex-R5 | -mfpu=vfpv3-d16                            | /thumb   |
+|Cortex-R7 |                                            | /softfp  |
+|(Soft FP) |                                            |          |
+|----------|--------------------------------------------|----------|
+|Cortex-R4 | [-mthumb] -march=armv7-r -mfloat-abi=hard  | armv7-ar |
+|Cortex-R5 | -mfpu=vfpv3-d16                            | /thumb   |
+|Cortex-R7 |                                            | /fpu     |
+|(Hard FP) |                                            |          |
+|----------|--------------------------------------------|----------|
+|Cortex-A* | [-mthumb] -march=armv7-a                   | armv7-ar |
+|(No FP)   |                                            | /thumb   |
+|----------|--------------------------------------------|----------|
+|Cortex-A* | [-mthumb] -march=armv7-a -mfloat-abi=softfp| armv7-ar |
+|(Soft FP) | -mfpu=vfpv3-d16                            | /thumb   |
+|          |                                            | /softfp  |
+|----------|--------------------------------------------|----------|
+|Cortex-A* | [-mthumb] -march=armv7-a -mfloat-abi=hard  | armv7-ar |
+|(Hard FP) | -mfpu=vfpv3-d16                            | /thumb   |
+|          |                                            | /fpu     |
+--------------------------------------------------------------------
+```
+
+[Linker script manual](http://www.math.utah.edu/docs/info/ld_3.html)
 
 
 ### Cortex-M
@@ -41,7 +189,7 @@ I am working on a custom NEWLIB but first I wanted to make sure that NEWLIB comp
 
 [Tail-Chaining ARM Cortex-M0 Interrupts](https://embeddedfreak.wordpress.com/2010/10/19/tail-chaining-arm-cortex-m0-interrupts/)
 
-
+[Cortex-M0 memory map](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0182n/CHDHCADA.html)
 
 
 [在 Cortex-M3 上運用 CodeSourcery 裸機工具鏈](http://cms.mcuapps.com/tooltips/tt0004/)
@@ -134,6 +282,12 @@ exit
 sudo rm $targetdir/etc/resolv.conf
 sudo rm $targetdir/usr/bin/qemu-arm-static
 ```
+
+### Linker Script
+
+[rtenv的linker script解釋](http://wen00072-blog.logdown.com/posts/247207-rtenv-linker-script-explained)
+
+
 
 
 ### libc

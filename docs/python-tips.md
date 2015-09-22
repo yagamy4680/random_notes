@@ -260,6 +260,50 @@ that make use of innovative user interfaces, such as multi-touch apps.
 
 - [PyFormat](http://pyformat.info/), Python has had awesome string formatters for many years but the documentation on them is far too theoretic and technical. With this site we try to show you the most common use-cases covered by the old and new style string formatting API with practical examples.
 
+#### [psutil](https://github.com/giampaolo/psutil), A cross-platform process and system utilities module for Python
+
+```python
+psutil.cpu_times()
+psutil.cpu_percent(interval=1, percpu=True)
+psutil.cpu_count()
+psutil.cpu_count(logical=False)
+psutil.virtual_memory()
+psutil.swap_memory()
+psutil.disk_partitions()
+psutil.disk_usage('/')
+psutil.disk_io_counters(perdisk=False)
+psutil.net_io_counters(pernic=True)
+psutil.net_connections()
+psutil.net_if_addrs()
+psutil.net_if_stats()
+psutil.users()
+psutil.boot_time()
+psutil.pids()
+p = psutil.Process(7055)
+	p.name()
+	p.exe()
+	p.cwd()
+	p.cmdline()
+	p.status()
+	p.username()
+	p.create_time()
+	p.cpu_times()
+	p.cpu_percent(interval=1.0)
+	p.memory_percent()
+	p.memory_info()    # pmem(rss=7471104, vms=68513792)
+	p.memory_info_ex() # extmem(rss=9662464, vms=49192960, shared=3612672, text=2564096, lib=0, data=5754880, dirty=0)
+	p.io_counters()
+	p.open_files()
+	p.connections()
+	p.num_threads()
+	p.num_fds()
+	p.threads()
+	p.nice()
+	
+	p.suspend()
+	p.resume()
+	p.terminate()
+```
 
 ### Articles
 
